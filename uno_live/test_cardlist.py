@@ -52,7 +52,8 @@ def test_hahd():
     hand.remove('y0')
     assert (str(hand) == 'r3 b4 g2')
 
-    #assert(hand.playable_list('g3') == 'r3 g2')
+    """top = Card('green', 3)
+    assert(hand.playable_list(top) == 'r3 g2')"""
 
     hand.add('y6')
     assert (str(hand) == 'r3 b4 g2 y6')
