@@ -141,8 +141,9 @@ game_state = {
     'deck': 'y9 r9 y0 y1'
 }
 
-
-app = UnoGame.create(['Charly', 'Bob', 'Olga', 'Natasha'])
+print('Введите свое имя')
+my_name = input()
+app = UnoGame.create([my_name, 'Bob', 'Olga', 'Natasha'])
 #app = UnoGame.load(game_state)
 #print(app)
 print(json.dumps(app.save(), indent=4))
