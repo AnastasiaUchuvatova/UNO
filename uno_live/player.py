@@ -1,13 +1,14 @@
+from uno_live.card import Card
 from uno_live.cardlist import Hand
 
 
 class Player:
-    def __init__(self, name, cards):
+    def __init__(self, name: list[str], cards: list[Card]):
         self.name = name
         self.hand = Hand(cards)
 
     def __repr__(self):
-        return f'{self.name}: {self.hand}'
+        return f'{self.name:}: {repr(self.hand)}'
 
     def get_payable_card(self, top):
         """Возвращает ОДНУ карту, которую сыграли на top или None, если играть нельзя (нет подходящих карт)"""
